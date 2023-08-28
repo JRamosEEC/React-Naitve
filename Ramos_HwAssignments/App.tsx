@@ -32,7 +32,7 @@ const DetailsStack = createStackNavigator<StackParamList>();
 const HomeStackNavigator = () => {
   return (
     <HomeStack.Navigator screenOptions={{ headerShown: false }}>
-      <HomeStack.Screen name="Test" component={PhotoGalleryApp} />
+      <HomeStack.Screen name="PhotoG" component={PhotoGalleryApp} />
     </HomeStack.Navigator>
   );
 };
