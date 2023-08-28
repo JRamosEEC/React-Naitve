@@ -11,6 +11,8 @@ import { ImageModal } from './ImageModal';
 
 //HW Assignments
 import PhotoGalleryApp from './Ramos_Wk3_PhotoGalleryNav/PhotoGalleryApp.tsx';
+import WeatherApp from './Ramos_Wk4_WeatherApp/WeatherApp.tsx';
+import BarcodeScannerApp from './Ramos_ClassAssignment_BarcodeScanner/BarcodeScannerApp.tsx';
 
 import Ionicons from '@expo/vector-icons/Ionicons';
 
@@ -30,7 +32,7 @@ const DetailsStack = createStackNavigator<StackParamList>();
 const HomeStackNavigator = () => {
   return (
     <HomeStack.Navigator screenOptions={{ headerShown: false }}>
-      <HomeStack.Screen name="Home" component={PhotoGalleryApp} />
+      <HomeStack.Screen name="PhotoG" component={PhotoGalleryApp} />
     </HomeStack.Navigator>
   );
 };
@@ -70,11 +72,13 @@ export default function App() {
           headerShown: false,
         }}
       >
+        {/* Homework Assignments */}
         <Drawer.Screen name="Week2-PhotoGallery" component={PhotoGallery} />
         <Drawer.Screen name="Week3-PhotoGalleryWithNav" component={HW3PhotoGalleryNav} />
+        <Drawer.Screen name="Week4-WeatherApp" component={WeatherApp} />
 
-        {/* Next Weeks Assignment */}
-        <Drawer.Screen name="Week4-WeatherApp" component={PhotoGallery} />
+        {/* Class Assignments */}
+        <Drawer.Screen name="Week4-Class-BarcodeScannerApp" component={BarcodeScannerApp} />
       </Drawer.Navigator>
 
 
