@@ -1,6 +1,4 @@
-import { Text, View } from 'react-native';
-import { NavigationContainer, useNavigation, useRoute, RouteProp, StackActions } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { PhotoGallery } from './PhotoGallery';
 import { ImageDetails } from './ImageDetails';
 import { ImageModal } from './ImageModal';
@@ -10,7 +8,7 @@ export type StackParamList = {
   ImageDetails: { imageUrl: string };
   ImageModal: { imageUrl: string};
 };
-const Stack = createStackNavigator<StackParamList>();
+const Stack = createNativeStackNavigator<StackParamList>();
 
 export default function PhotoGalleryApp() {
   return (
